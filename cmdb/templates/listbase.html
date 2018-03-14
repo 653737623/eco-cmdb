@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<div class="container">
+    {% include 'header.html' %}
+    <div class="col-md-2">
+        {% include 'leftslider.html' %}
+    </div>
+    <div class="col-md-10">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'footer.html' %}
+</div>
+</body>
+</html>

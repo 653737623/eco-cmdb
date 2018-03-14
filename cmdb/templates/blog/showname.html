@@ -1,0 +1,28 @@
+{% extends "listbase.html"%}
+{% block content %}
+<div  class="row vertical-midle-sm ">
+    <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Hostname</th>
+
+      <th>Hostip</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Monitor</th>
+    </tr>
+  </thead>
+  <tbody>
+  {%for t in name %}
+    <tr>
+      <td> <a href={{t.host_id}}> {{t.host_name}}</a> </td>
+      <td>{{t.host_ip}}</td>
+      <td>{{t.host_info}}</td>
+      <td>{{t.host_status}}</td>
+      <td>{{t.host_monitor}}</td>
+    </tr>
+   {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

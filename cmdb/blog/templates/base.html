@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/blog">cmdb资产中心</a>
+    </div>
+    <div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Network</a></li>
+            <li><a href="#">Server</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Client <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">D1</a></li>
+                    <li><a href="#">D2</a></li>
+                    <li><a href="#">D3</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">M1</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">M2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+	</div>
+</nav>
+<div calss="container">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
